@@ -15,11 +15,11 @@
 project_name: "ccai-insights"
 
 constant: db_connection_name {
-  value: "bq-looker-marketplace"
+  value: "prj-myflfamilies-ccai-mvp-prod"
   export: override_optional
 }
 
 constant: insights_table {
-  value: "insights_demo.insights_export"
+  value: "bq_myflfamilies_ccai_insights.tbl_ccai_insights"
   export: override_optional
 }
