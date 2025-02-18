@@ -25,6 +25,6 @@ constant: insights_table {
 }
 
 constant: DIALOGFLOW_TABLE {
-  value: "ds_dialogflow_agent_export.dialogflow_data"
+  value: "bq_myflfamilies_dfcx_export.dialogflow_data"
   export: override_optional
 }
