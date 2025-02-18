@@ -23,3 +23,8 @@ constant: insights_table {
   value: "bq_myflfamilies_ccai_insights.tbl_ccai_insights"
   export: override_optional
 }
+
+constant: DIALOGFLOW_TABLE {
+  value: "ds_dialogflow_agent_export.dialogflow_data"
+  export: override_optional
+}
