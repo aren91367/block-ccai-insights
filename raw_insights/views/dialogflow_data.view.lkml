@@ -89,9 +89,11 @@ view: dialogflow_data {
     sql: ${TABLE}.hour ;;
   }
   dimension: language_code {
-    hidden: yes
+    hidden: no
     type: string
     sql: ${TABLE}.language_code ;;
+    group_label: "Request"
+    group_item_label: "Language Code"
   }
   dimension: minute {
     hidden: yes
@@ -111,10 +113,11 @@ view: dialogflow_data {
     group_item_label: "Event"
   }
   dimension: request__query_input__language_code {
+    hidden: yes
     type: string
     sql: ${TABLE}.request.queryInput.languageCode ;;
     group_label: "Request"
-    group_item_label: "Language Code"
+    group_item_label: "Request Language Code"
   }
   dimension: request_text {
     type: string
