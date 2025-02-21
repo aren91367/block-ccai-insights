@@ -13,7 +13,7 @@
 #    limitations under the License.
 
 - dashboard: conversation_lookup
-  title: Conversation Lookup
+  title: GTS Conversation Lookup
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
