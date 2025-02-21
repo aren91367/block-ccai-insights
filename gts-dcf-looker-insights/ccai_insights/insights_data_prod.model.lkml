@@ -150,6 +150,12 @@ explore: insights_data {
     sql_on: ${insights_data.start_date}=${daily_facts.start_date} AND ${insights_data.medium} = ${daily_facts.conversation_medium};;
   }
 
+  join: agent_filter { # Select an agent to compare against other agents in Agent Performance Ranking dashboard
+    view_label: "6: Agents"
+    type: left_outer
+    sql:  ;;
+  relationship: one_to_one
+}
 
 }
 
