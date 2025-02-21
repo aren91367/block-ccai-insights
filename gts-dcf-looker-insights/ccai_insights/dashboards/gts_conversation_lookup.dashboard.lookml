@@ -12,9 +12,8 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
-
-- dashboard: gts_conversation_lookup
-  title: GTS Conversation Lookup
+- dashboard: conversation_lookup
+  title: Conversation Lookup
   layout: newspaper
   preferred_viewer: dashboards-next
   description: ''
@@ -22,7 +21,7 @@
   elements:
   - title: Transcript
     name: Transcript
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: looker_grid
     fields: [sentence_turn_number.turn_number, insights_data__sentences__phrase_match_data.display_name,
@@ -65,7 +64,7 @@
     height: 7
   - title: Client Sentiment
     name: Client Sentiment
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data.client_sentiment_category, insights_data.average_client_sentiment_category_value]
@@ -93,7 +92,7 @@
     height: 2
   - title: Duration
     name: Duration
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data.minutes_conversation]
@@ -132,7 +131,7 @@
     height: 2
   - title: Most Salient Entities
     name: Most Salient Entities
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: looker_column
     fields: [insights_data__entities.average_salience, insights_data__entities.name]
@@ -182,7 +181,7 @@
     height: 5
   - title: Agent ID
     name: Agent ID
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data__agents.agent_id]
@@ -221,7 +220,7 @@
     height: 2
   - title: Agent Sentiment
     name: Agent Sentiment
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data.agent_sentiment_category, insights_data.average_agent_sentiment_category_value]
@@ -248,7 +247,7 @@
     height: 2
   - title: Topic
     name: Topic
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data__topics.name]
@@ -287,7 +286,7 @@
     height: 2
   - title: Start Date
     name: Start Date
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data.start_date]
@@ -312,7 +311,7 @@
     height: 2
   - title: Conversation ID
     name: Conversation ID
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data.unnested_conversation_id]
@@ -351,7 +350,7 @@
     height: 2
   - title: Import Date
     name: Import Date
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: single_value
     fields: [insights_data.load_date]
@@ -401,7 +400,7 @@
     height: 2
   - title: Top Topics
     name: Top Topics
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: looker_grid
     fields: [insights_data__topics.name, insights_data__topics.score]
@@ -465,7 +464,7 @@
     height: 5
   - title: Custom Highlights
     name: Custom Highlights
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: looker_column
     fields: [insights_data__sentences.count, insights_data__sentences__phrase_match_data.display_name]
@@ -514,7 +513,7 @@
     height: 5
   - title: Smart Highlights
     name: Smart Highlights
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     type: looker_column
     fields: [insights_data__sentences.count, insights_data__sentences__intent_match_data.display_name]
@@ -572,7 +571,7 @@
       type: dropdown_menu
       display: inline
       options: []
-    model: insights_data_prod
+    model: insights_demo
     explore: insights_data
     listens_to_filters: []
     field: insights_data.conversation_name

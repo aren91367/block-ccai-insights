@@ -15,8 +15,8 @@
 connection: "@{db_connection_name}"
 
 # include all the views
-include: "/views/*.view.lkml"
-include: "/dashboards/*.dashboard.lookml"
+include: "./views/*.view.lkml"
+include: "./dashboards/*.dashboard.lookml"
 
 datagroup: insights_daily_datagroup {
   sql_trigger: SELECT current_date;;
@@ -150,12 +150,6 @@ explore: insights_data {
     sql_on: ${insights_data.start_date}=${daily_facts.start_date} AND ${insights_data.medium} = ${daily_facts.conversation_medium};;
   }
 
-  join: agent_filter { # Select an agent to compare against other agents in Agent Performance Ranking dashboard
-    view_label: "6: Agents"
-    type: left_outer
-    sql:  ;;
-  relationship: one_to_one
-}
 
 }
 
